@@ -1,27 +1,35 @@
 import Link from 'next/link'
 import { Instagram, Facebook, Mail, Phone } from 'lucide-react'
 
-function CampflyLogo({ className = '' }: { className?: string }) {
+function CampflyLogo() {
   return (
-    <svg
-      viewBox="0 0 220 60"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-      aria-label="Campfly"
-    >
-      <g transform="translate(4, 8)">
-        <path d="M22 36 C14 30, 8 20, 12 8 C16 18, 20 24, 28 28 Z" fill="#006060" opacity="0.7" />
-        <path d="M22 36 C18 28, 16 18, 22 6 C24 16, 25 24, 30 30 Z" fill="#006060" opacity="0.85" />
-        <path d="M22 36 C22 26, 24 16, 32 8 C31 18, 29 26, 32 32 Z" fill="#006060" />
-        <path d="M28 14 C22 8, 12 10, 10 18 C9 24, 13 30, 20 32" fill="none" stroke="#faaa34" strokeWidth="4" strokeLinecap="round" />
-      </g>
-      <text x="52" y="42" fontFamily="Poppins, sans-serif" fontWeight="700" fontSize="28" fill="#ffffff">
-        Camp
-      </text>
-      <text x="126" y="42" fontFamily="Poppins, sans-serif" fontWeight="700" fontSize="28" fill="#faaa34">
-        fly
-      </text>
-    </svg>
+    <div className="flex items-center gap-2">
+      <svg
+        width="38"
+        height="38"
+        viewBox="0 0 100 100"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M50 85 C35 75, 15 58, 18 32 C25 48, 33 58, 45 65 Z" fill="#006060" opacity="0.6" />
+        <path d="M50 85 C40 72, 28 55, 34 28 C38 45, 42 58, 52 68 Z" fill="#006060" opacity="0.8" />
+        <path d="M50 85 C46 70, 42 53, 52 25 C53 42, 52 58, 60 70 Z" fill="#006060" />
+        <path d="M50 85 C54 70, 60 54, 72 30 C68 46, 62 60, 68 72 Z" fill="#006060" opacity="0.75" />
+        <path d="M72 28 C65 12, 42 10, 30 22 C22 30, 22 42, 30 50" stroke="#faaa34" strokeWidth="8" strokeLinecap="round" fill="none" />
+      </svg>
+      <span
+        style={{
+          fontFamily: 'var(--font-poppins), Poppins, sans-serif',
+          fontWeight: 800,
+          fontSize: '1.4rem',
+          lineHeight: 1,
+          letterSpacing: '-0.02em',
+        }}
+      >
+        <span style={{ color: '#ffffff' }}>Camp</span>
+        <span style={{ color: '#faaa34' }}>fly</span>
+      </span>
+    </div>
   )
 }
 
@@ -30,7 +38,7 @@ export default function Footer() {
     <footer className="bg-black text-white">
       <div className="mx-auto grid max-w-7xl gap-16 px-6 py-20 md:grid-cols-2 xl:grid-cols-4">
         <div>
-          <CampflyLogo className="h-10 w-auto" />
+          <CampflyLogo />
           <p className="mt-6 leading-relaxed text-neutral-400">
             Premium curated travel experiences for couples, families, and
             explorers across domestic and international destinations.
@@ -61,7 +69,7 @@ export default function Footer() {
         <div>
           <h3 className="mb-6 text-xl font-semibold">Follow Us</h3>
           <div className="flex gap-5 text-neutral-300">
-            <a href="https://instagram.com/campfly.in" target="_blank">
+            <a href="https://instagram.com/campfly.in" target="_blank" rel="noopener noreferrer">
               <Instagram />
             </a>
             <a href="#">
