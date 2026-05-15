@@ -1,19 +1,15 @@
 import type { Metadata } from 'next'
-import { Inter, Playfair_Display } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 import './globals.css'
 
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import WhatsAppFloatingButton from '@/components/layout/WhatsAppFloatingButton'
 
-const inter = Inter({
+const poppins = Poppins({
   subsets: ['latin'],
-  variable: '--font-inter',
-})
-
-const playfair = Playfair_Display({
-  subsets: ['latin'],
-  variable: '--font-playfair',
+  weight: ['300', '400', '500', '600', '700', '800'],
+  variable: '--font-poppins',
 })
 
 export const metadata: Metadata = {
@@ -30,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${playfair.variable} bg-white text-black antialiased`}
+        className={`${poppins.variable} bg-white text-black antialiased`}
       >
         <Navbar />
         {children}
