@@ -22,9 +22,5 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-inter), sans-serif;
-}
-
-.font-display {
-  font-family: var(--font-playfair), serif;
+  font-family: var(--font-poppins), sans-serif;
 }
