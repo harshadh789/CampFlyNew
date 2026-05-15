@@ -10,8 +10,8 @@ const config: Config = {
     extend: {
       colors: {
         campfly: {
-          teal: '#0D7377',
-          orange: '#F4845F',
+          teal: '#006060',
+          orange: '#faaa34',
           dark: '#111827',
           light: '#F8FAFC',
         },
@@ -22,7 +22,7 @@ const config: Config = {
       },
       backgroundImage: {
         'hero-gradient':
-          'linear-gradient(to bottom right, rgba(13,115,119,0.75), rgba(17,24,39,0.85))',
+          'linear-gradient(to bottom right, rgba(0,96,96,0.75), rgba(17,24,39,0.85))',
       },
       boxShadow: {
         premium: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
