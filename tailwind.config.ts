@@ -17,8 +17,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        display: ['Playfair Display', 'serif'],
+        sans: ['var(--font-poppins)', 'sans-serif'],
+        poppins: ['var(--font-poppins)', 'sans-serif'],
       },
       backgroundImage: {
         'hero-gradient':
