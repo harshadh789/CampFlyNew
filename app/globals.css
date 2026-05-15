@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --campfly-teal: #0D7377;
-  --campfly-orange: #F4845F;
+  --campfly-teal: #006060;
+  --campfly-orange: #faaa34;
   --background: #ffffff;
   --foreground: #111827;
 }
