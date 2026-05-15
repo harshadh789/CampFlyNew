@@ -1,11 +1,10 @@
 type BlogPageProps = {
-  params: {
-    slug: string
-  }
+  params: Promise<{ slug: string }>
 }
 
-export default function BlogDetailPage({ params }: BlogPageProps) {
-  const title = params.slug
+export default async function BlogDetailPage({ params }: BlogPageProps) {
+  const { slug } = await params
+  const title = slug
     .split('-')
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ')
@@ -37,14 +36,11 @@ export default function BlogDetailPage({ params }: BlogPageProps) {
             Modern travelers are no longer looking for generic sightseeing.
             They want immersive, emotional, and memorable experiences.
           </p>
-
           <p>
             CampFly focuses on curated travel experiences that combine premium
             comfort with authentic local exploration.
           </p>
-
           <h2>Why Experience-Led Travel Matters</h2>
-
           <p>
             Experience-driven tourism creates stronger emotional connection,
             higher traveler satisfaction, and more meaningful memories.
