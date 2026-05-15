@@ -1,8 +1,8 @@
-import { createClient } from 'next-sanity'
+// Sanity CMS client - placeholder until next-sanity is configured
+// To activate: add 'next-sanity' to package.json dependencies
 
-export const client = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
-  apiVersion: '2025-01-01',
-  useCdn: true,
-})
+export const client = null
+
+export async function sanityFetch<T = unknown>(_query: string): Promise<T[]> {
+  return []
+}
